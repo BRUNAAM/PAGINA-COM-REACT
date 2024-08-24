@@ -27,7 +27,7 @@ const App = () => {
       nome: "Nome completo",
       id: "nome",
       tipo: "text",
-    }, //Fim do OBJETO
+    },
     {
       nome: "Email Válido",
       id: "email",
@@ -52,9 +52,30 @@ const App = () => {
       nome: "Deixe seu recado",
       id: "recado",
       tipo: "text",
-    },
+    }, // fim
   ];
 
+  const CampoServicos = [
+    //VETOR de OBJETOS
+    {
+      //Começa o Objeto
+      nome: "Titulo",
+      id: "titulo",
+      tipo: "text",
+    },
+    {
+      nome: "Descrição",
+      id: "descricao",
+      tipo: "text",
+    },
+
+    {
+      nome: "Imagem",
+      id: "img",
+      tipo: "text",
+    },
+    //fim
+  ];
   return (
     <div>
       <Cabecalho />
@@ -66,11 +87,11 @@ const App = () => {
       <Secao>
         <Titulo texto="Serviços" />
         <Cartao
-          descricao="Um texto descritivo"
-          imagem="#"
-          titulo="Um LOGO BEM GRANDE"
-        />
-        <Cartao descricao="LOREN IPSUN" imagem="#" titulo="Um TITULO" />
+          imagem="src/assets/imagem.webp"
+          titulo="SEU PET SAUDAVEL" />
+        <Cartao descricao="**Cuide bem de quem te faz feliz!**
+Na nossa clínica veterinária, a saúde e o bem-estar do seu pet são nossas prioridades. Oferecemos atendimento especializado com carinho e dedicação para garantir que seu companheiro receba o melhor cuidado. Seja consulta de rotina, vacinas, ou tratamentos mais complexos, estamos aqui para cuidar de quem sempre está ao seu lado. Visite-nos e veja como podemos ajudar a manter seu pet saudável e feliz! "/>
+        <Formulario campos={CampoServicos} />
       </Secao>
 
       <Secao>
@@ -78,6 +99,7 @@ const App = () => {
 
         <Formulario campos={campos} />
         <button onClick={lerBanco}>Ler dados do Banco</button>
+
       </Secao>
     </div>
   );
