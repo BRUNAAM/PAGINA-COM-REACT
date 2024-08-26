@@ -1,6 +1,6 @@
 import "./Formulario.css";
 import { collection, addDoc } from "firebase/firestore";
-import db from "../database/firebaseConfig";
+import db from "../database/firebase";
 import React, { useState } from "react";
 
 function FormularioComImagem() {

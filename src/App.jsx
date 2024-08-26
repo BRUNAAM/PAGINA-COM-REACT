@@ -6,9 +6,8 @@ import Cartao from "./components/Cartao";
 import Titulo from "./components/Titulo";
 import Formulario from "./components/Formulario";
 import "./App.css";
-
 import { collection, getDocs } from "firebase/firestore";
-import db from "./database/firebaseConfig";
+import db from "./database/firebase";
 
 const App = () => {
   //Busca todos os documentos da coleção "comentarios"
